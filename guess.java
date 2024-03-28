@@ -10,7 +10,7 @@ public class NumberGuessingGame {
 		int j = 7;
 		int i, guess;
 		System.out.println("Choose a number of your choice"
-		+ " between 1 to 100."+ "Guess the number"+ " within 3 trials.");
+		+ " between 1 to 100."+ "Guess the number"+ " within 7 trials.");
 		for (i = 0; i < j; i++) 
 		{
 			System.out.println(
