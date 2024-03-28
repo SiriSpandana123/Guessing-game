@@ -1,76 +1,45 @@
 import java.util.Scanner;
 
-public class Guessthenumbergame {
-
-	// Function that implements the
-	// number guessing game
+public class NumberGuessingGame {
 	public static void
-	guessingNumberGame()
+	NumberGuessingGame()
 	{
-		// Scanner Class
 		Scanner sc = new Scanner(System.in);
-
-		// Generate the numbers
 		int number = 1 + (int)(100
 							* Math.random());
-
-		// Given K trials
-		int K = 5;
-
+		int j = 7;
 		int i, guess;
-
-		System.out.println(
-			"A number is chosen"
-			+ " between 1 to 100."
-			+ "Guess the number"
-			+ " within 5 trials.");
-
-		// Iterate over K Trials
-		for (i = 0; i < K; i++) {
-
+		System.out.println("Choose a number of your choice"
+		+ " between 1 to 100."+ "Guess the number"+ " within 3 trials.");
+		for (i = 0; i < j; i++) 
+		{
 			System.out.println(
-				"Guess the number:");
-
-			// Take input for guessing
+				"Guess the  Correct number:");
 			guess = sc.nextInt();
-
-			// If the number is guessed
-			if (number == guess) {
-				System.out.println(
-					"Congratulations!"
-					+ " You guessed the number.");
+			if (number == guess) 
+			{
+				System.out.println("Wondrafull!"+ " You Successfully guessed the number.");
 				break;
 			}
-			else if (number > guess
-					&& i != K - 1) {
-				System.out.println(
-					"The number is "
-					+ "greater than " + guess);
+			else if (number > guess && i != j - 1) 
+			{
+				System.out.println("The number is "+ "greater than " + guess);
 			}
-			else if (number < guess
-					&& i != K - 1) {
-				System.out.println(
-					"The number is"
-					+ " less than " + guess);
+			else if (number < guess && i != j - 1) 
+			{
+				System.out.println("The number is"+ " less than " 
+				+ guess);
 			}
 		}
-
-		if (i == K) {
-			System.out.println(
-				"You have exhausted"
-				+ " K trials.");
-
-			System.out.println(
-				"The number was " + number);
+        if (i == j) 
+		{
+			System.out.println("The number we selected was " 
+			+ number);
 		}
 	}
-
-	// Driver Code
 	public static void
 	main(String arg[])
 	{
-
-		// Function Call
-		guessingNumberGame();
+		NumberGuessingGame();
 	}
 }
